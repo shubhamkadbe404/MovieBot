@@ -1,0 +1,254 @@
+/* Font Import */
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Style */
+body {
+  background-color: #000000;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+span.movietext {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 1px;
+  color: #f65353;
+}
+
+/* Navigation */
+.navbar #navbarNav ul.navbar-nav li {
+  padding: 0 12px;
+}
+.navbar #navbarNav ul.navbar-nav li a.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+}
+.navbar #navbarNav ul.navbar-nav li a.nav-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1.5px;
+  border-radius: 2px;
+  background-color: #f65353;
+  bottom: 3px;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+.navbar #navbarNav ul.navbar-nav li a.nav-link:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+button.howtosearch {
+  box-shadow: inset 0 0 0 0 #f65353;
+  color: #f65353;
+  padding: 5px;
+  border-radius: 0;
+  font-weight: normal;
+  transition: color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+button.howtosearch:hover {
+  color: #fff;
+  box-shadow: inset 200px 0 0 0 #f65353;
+  padding: 5px;
+  border-radius: 0;
+  font-weight: normal;
+}
+
+/* Global Anchor Tag */
+a.global-link {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+}
+a.global-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1.5px;
+  border-radius: 2px;
+  background-color: #f65353;
+  bottom: -5px;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+a.global-link:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+/* Hero Section */
+#Home {
+  height: 90vh;
+}
+#Home .main-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+#Home .heading h1 {
+  font-family: "Anton", sans-serif;
+  font-size: 150px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 3px;
+  color: #f65353;
+  margin-bottom: 30px;
+}
+#Home .heading h2 {
+  font-size: 65px;
+}
+#Home .heading p {
+  font-size: 35px;
+}
+#Minds h4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 32px;
+}
+.profile-circle.text-center img {
+  border: 3px solid #f65353;
+}
+
+/* Scroll Top */
+a.scrolltop {
+  position: fixed;
+  top: 80%;
+  right: 3%;
+  text-transform: none;
+}
+a.scrolltop img {
+  width: 45px;
+  transition: 0.2s ease-in-out;
+  border-radius: 50%;
+}
+a.scrolltop:hover img {
+  scale: 1.2;
+  transition: 0.2s ease-in-out;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+/* Scroller */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f65353ad;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #f65353;
+}
+
+/* Chat Container */
+.chat-container {
+  height: 300px;
+  overflow-y: scroll;
+  padding: 20px;
+  margin: 30px 0;
+  box-shadow: -1px 1px 20px 0 rgba(255, 255, 255, 0.37);
+  border: 1px solid #fff;
+}
+.user-msg {
+  text-align: right;
+  margin-bottom: 15px;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+.bot-msg {
+  text-align: left;
+  margin-bottom: 10px;
+  color: #f65353;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.chatbox input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  color: #fff;
+  background-color: transparent;
+}
+.chatbox button {
+  border: 2px solid #f65353;
+  background-color: transparent;
+  color: #fff;
+  padding: 15px 40px;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-right: 30px;
+  margin-top: 10px;
+  font-family: "Poppins", sans-serif;
+  transition: 0.2s ease-in-out;
+}
+.chatbox button:hover {
+  background-color: #f65353;
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+.chatbox .clear-button {
+  background-color: transparent;
+}
+
+/* Box Section */
+.Boxsection {
+  background-color: #f65353;
+}
+.Boxsection .inner-box .card img {
+  width: 55px;
+}
+
+/* Social Contact Section */
+.social-icon a img {
+  width: 25px;
+  transition: 0.2s ease-in-out;
+}
+.social-icon a img:hover {
+  scale: 1.1;
+  transition: 0.2s ease-in-out;
+}
+
+
+/* Responsive */
+@media only screen and (min-width: 320px) and (max-width: 667px){
+  #Home .heading h1 {
+    font-family: "Anton", sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 3px;
+    color: #f65353;
+    margin-bottom: 30px;
+  }
+  #Home .heading h2 {
+    font-size: 25px;
+  }
+  #Home .heading p {
+    font-size: 15px;
+  }
+  div>a.scrolltop img {
+    display: none;
+  }
+}

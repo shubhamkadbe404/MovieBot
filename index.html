@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Movie Bot</title>
+  </head>
+  <body data-bs-spy="scroll">
+    <!-- Container -->
+    <section>
+      <div class="container">
+        <!-- Navigation -->
+        <nav
+          id="Topnav"
+          class="navbar navbar-expand-lg bg-transparent pb-5"
+          data-bs-theme="dark"
+        >
+          <a class="navbar-brand" href="#"
+            ><img src="img/MovieBot.png" alt="MovieBot-Logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#Home"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Aboutus"
+                  >About <span class="movietext">MovieBot</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Contactus">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Minds">Creators</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Slider Button -->
+          <button
+            class="btn howtosearch"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight"
+          >
+            How to Search
+          </button>
+          <!-- Slider Button -->
+        </nav>
+        <!-- Modal -->
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasRight"
+          aria-labelledby="offcanvasRightLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title fw-bold" id="offcanvasRightLabel">
+              MovieBot
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <p class="fw-bold">"Unlock Your Next Obsession: 5 Easy Steps to Find Your Perfect Movie or Series!"</p>
+            <ul>
+              <li>Enter the title of the movie or series you're interested in.</li>
+              <li>Hit the search button to initiate the search process.</li>
+              <li>Browse through the search results to find your desired title.</li>
+              <li>Click on the title to access more details like ratings, reviews, and synopsis.</li>
+              <li>Finally, make an informed decision based on the information provided whether to watch it or not.</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Modal -->
+        <!-- Navigation -->
+      </div>
+    </section>
+
+    <!-- All Sections -->
+    <div class="container">
+      <!-- Heading Section Start -->
+      <section id="Home">
+        <div class="row heading py-5">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+            <div class="main-heading">
+              <h1>MovieBot</h1>
+              <h2>Your Ultimate Movie Companion</h2>
+              <p class="pb-4">
+                Experience Seamless Movie Recommendations and Information
+                Retrieval with Cutting-Edge API Integration
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Heading Section End -->
+
+      <!-- MovieBot Box Start -->
+      <section id="MovieBot">
+        <div class="row pb-5 align-items-center">
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="movieseat text-center">
+              <img src="img/movie.svg" class="w-75 img-fluid" alt="" />
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="chatbox text-center">
+              <h3>Discover Your Next Obsession Worthy Watching!</h3>
+              <div>
+                <div class="chat-container" id="chat-container">
+                  <div class="bot-msg">Watch it or Ditch it? Find Out Now! (Type Movie/Series Name)</div>
+                </div>
+                <input
+                  type="text"
+                  id="user-input"
+                  placeholder="Type your message here..."
+                />
+                <div class="d-flex flex-row">
+                  <button onclick="sendMessage()">Send</button>
+                  <button class="clear-button" onclick="clearChat()">
+                    Clear
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- MovieBot Box Start -->
+
+      <!-- About MovieBot Section Start -->
+      <section id="Aboutus">
+        <div class="row py-5 align-items-center">
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div>
+              <h2 class="text-start mb-4">
+                What Is <span class="movietext">MovieBot</span>
+              </h2>
+              <p class="lh-lg">
+                <span class="movietext">MovieBot</span> : Your Cinematic
+                Companion for Tailored Exploration. Unlock a Universe of Films
+                with Advanced Integration and Seamless API Connectivity. Dive
+                Deep into Movie Lore with Personalized Recommendations.
+                Empowering Developers with Extensive API Access for Creative
+                Innovation. Your Gateway to Cinematic Immersion and Discovery,
+                Redefining the Movie Experience. Experience the Future of Film
+                Exploration with <span class="movietext">MovieBot</span>, Where
+                Every Movie Journey is Unique and Personalized.
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div>
+              <img src="img/robot.svg" class="w-100 img-fluid" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- About MovieBot Section End -->
+    </div>
+
+    <!-- Full Color Section Start -->
+    <section class="Boxsection">
+      <div class="container-fluid py-5">
+        <div class="row py-4">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h3 class="text-center">
+              Delving into the Advantages Offered by MovieBot
+            </h3>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row pb-4">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+              <div class="inner-box pb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <img src="img/like.png" class="img-fluid py-3" alt="" />
+                    <h5 class="card-title">Personalized Recommendations</h5>
+                    <p class="card-text pb-3">
+                      MovieBot employs advanced algorithms to analyze user
+                      preferences and viewing history, providing tailored movie
+                      recommendations based on individual tastes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+              <div class="inner-box pb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <img
+                      src="img/data-processing.png"
+                      class="img-fluid py-3"
+                      alt=""
+                    />
+                    <h5 class="card-title">Vast Movie Database</h5>
+                    <p class="card-text pb-3">
+                      With a vast collection of movies spanning various genres,
+                      languages, and decades, MovieBot offers something for
+                      every type of movie enthusiast.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+              <div class="inner-box pb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <img src="img/login.png" class="img-fluid py-3" alt="" />
+                    <h5 class="card-title">User-Friendly Interface</h5>
+                    <p class="card-text pb-3">
+                      The website features an intuitive and user-friendly
+                      interface, making it easy for users to navigate, search
+                      for movies, and discover new titles effortlessly.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+              <div class="inner-box pb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <img
+                      src="img/convenient.png"
+                      class="img-fluid py-3"
+                      alt=""
+                    />
+                    <h5 class="card-title">Convenience</h5>
+                    <p class="card-text pb-3">
+                      MovieBot allows users to stream movies directly from the
+                      website, eliminating the need for multiple subscriptions
+                      or downloads. It provides convenient access to a wide
+                      range of films.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+              <div class="inner-box pb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <img
+                      src="img/cross-platform.png"
+                      class="img-fluid py-3"
+                      alt=""
+                    />
+                    <h5 class="card-title">Cross-Platform Compatibility</h5>
+                    <p class="card-text pb-3">
+                      MovieBot is accessible across multiple devices and
+                      platforms, including desktop computers, laptops, tablets,
+                      and smartphones, allowing users to enjoy their favorite
+                      movies on the go.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+              <div class="inner-box pb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <img
+                      src="img/data-processing.png"
+                      class="img-fluid py-3"
+                      alt=""
+                    />
+                    <h5 class="card-title">Regular Updates</h5>
+                    <p class="card-text pb-3">
+                      The website regularly updates its movie library with the
+                      latest releases, ensuring that users have access to the
+                      newest and most popular titles as soon as they become
+                      available.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Full Color Section End -->
+
+    <div class="container">
+      <!-- Get the Experience Section Start -->
+      <section id="Experience">
+        <div class="row py-5 align-items-center">
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="text-center">
+              <img src="img/horror.svg" class="img-fluid w-100" alt="" />
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div>
+              <h3 class="mb-4">
+                Get the Ultimate Movie Preview
+                <span class="movietext">Experience.</span>
+              </h3>
+              <p class="lh-lg">
+                Discover a new era in movie selection with our comprehensive
+                previews. No more blind choices - we offer detailed insights
+                into every aspect of the films you're considering. From plot
+                breakdowns to behind-the-scenes trivia, our previews provide a
+                holistic view. Catering to diverse tastes, we cover all genres,
+                ensuring there's something for everyone. Say goodbye to
+                disappointment and hello to informed decisions. With our
+                previews, you'll embark on cinematic adventures fully prepared
+                and excited. Make every movie night unforgettable with our
+                in-depth previews. Dive into the world of cinema like never
+                before and elevate your viewing experience today.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Get the Experience Section Start -->
+
+      <!-- Contact Us Section Start -->
+      <section id="Contactus">
+        <div class="row py-5 align-items-center">
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div>
+              <h3 class="mb-4">
+                Your feedback: the pulse of our
+                <span class="movietext">Evolution.</span>
+              </h3>
+              <p class="lh-lg">
+                "Your feedback fuels our growth. Share your thoughts,
+                suggestions, or concerns with us to help us improve. Contact us
+                through the form below or via email. We value your input."
+              </p>
+              <div class="emailbox">
+                <img src="img/email.png" alt="" />
+                <a
+                  href="mailto:swayam.kadbe@gmail.com"
+                  class="text-light text-decoration-none ms-2 global-link"
+                  >swayam.kadbe@gmail.com</a
+                >
+              </div>
+              <div class="text-end">
+                <img src="img/arrow.svg" class="img-fluid w-25" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div>
+              <img src="img/chat.svg" class="img-fluid" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact Us Section End -->
+
+      <!-- Behind The Scene Section Start -->
+      <section id="Minds">
+        <div class="row py-4">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h3 class="text-center py-5">
+              The Creative Mind's Behind <span class="movietext">MovieBot</span>
+            </h3>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div
+              class="profile-circle1 d-flex flex-column align-items-center justify-content-center"
+            >
+              <div class="profile-circle text-center">
+                <img
+                  src="img/milind.png"
+                  class="img-fluid w-50 rounded-circle"
+                  alt=""
+                />
+              </div>
+              <h4 class="py-4">Milind Yelne</h4>
+              <p class="text-start lh-lg">
+                Milind Yelne, a dedicated MCA student, is currently delving into
+                the world of frontend development as a diligent intern at a
+                renowned company. His enthusiasm for technology drives him to
+                immerse himself in diverse aspects of web development, where he
+                meticulously refines his skills. With a keen eye for detail and
+                a hunger for knowledge.
+              </p>
+              <p class="text-start lh-lg">
+                Milind strives to make substantial contributions to ongoing
+                projects while soaking up invaluable hands-on experience.
+                Committed to excellence, he sees this internship as a pivotal
+                stepping stone towards a fulfilling career in the ever-evolving
+                landscape of the tech industry.
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div
+              class="profile-circle2 d-flex flex-column align-items-center justify-content-center"
+            >
+              <div class="profile-circle text-center">
+                <img
+                  src="img/shubham.png"
+                  class="img-fluid w-50 rounded-circle"
+                  alt=""
+                />
+              </div>
+              <h4 class="py-4">Shubham Kadbe</h4>
+              <p class="text-start lh-lg">
+                Shubham Kadbe, a proficient MCA student, stands as a seasoned
+                Senior Frontend Developer boasting four years of rich experience
+                across various renowned frontend technologies. With a relentless
+                pursuit of excellence, he navigates the intricate realms of web
+                development with finesse, leveraging his extensive expertise to
+                craft seamless user experiences.
+              </p>
+              <p class="text-start lh-lg">
+                Shubham's journey embodies a blend of academic rigor and
+                real-world application, as he continues to push the boundaries
+                of innovation in his field. His unwavering commitment to
+                mastering diverse frontend technologies underscores his
+                dedication to delivering exceptional solutions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Behind The Scene Section End -->
+
+      <!-- Today's Recommendation Section Start -->
+      <section id="Recommendation">
+        <div class="row py-5">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h4 class="pb-4">
+              Our Today's <span class="movietext">MovieBot</span> Recommendation
+            </h4>
+            <div class="recomd-slider py-4">
+              <div
+                id="carouselExampleInterval"
+                class="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="img/Deadpool.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>First slide label</h5>
+                      <p>
+                        Some representative placeholder content for the first
+                        slide.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="img/godzillaXkong.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>First slide label</h5>
+                      <p>
+                        Some representative placeholder content for the first
+                        slide.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="img/aquaman2.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>First slide label</h5>
+                      <p>
+                        Some representative placeholder content for the first
+                        slide.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/venom.jpg" class="d-block w-100" alt="..." />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>First slide label</h5>
+                      <p>
+                        Some representative placeholder content for the first
+                        slide.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/wick.jpg" class="d-block w-100" alt="..." />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>First slide label</h5>
+                      <p>
+                        Some representative placeholder content for the first
+                        slide.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="img/witchhunter.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>First slide label</h5>
+                      <p>
+                        Some representative placeholder content for the first
+                        slide.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/matrix.jpg" class="d-block w-100" alt="..." />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>First slide label</h5>
+                      <p>
+                        Some representative placeholder content for the first
+                        slide.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExampleInterval"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExampleInterval"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Today's Recommendation Section Start -->
+    </div>
+
+    <!-- Top Button -->
+    <div>
+      <a class="scrolltop" href="#Topnav">
+        <img src="img/next.png" alt="Top" />
+      </a>
+    </div>
+    <!-- Top Button -->
+
+    <!-- Footer Section -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <footer
+            class="text-center py-3 mt-4 border-top d-flex flex-row justify-content-between"
+          >
+            <p class="m-0">
+              ©2024 Made With Love - <strong>GyaniBeard</strong>
+            </p>
+            <div class="social-icon d-flex align-items-center">
+              <p class="m-0">Contact Us</p>
+              <a href="https://www.linkedin.com/in/shubham-kadbe-0082331b0"
+                ><img src="img/linkedin.png" class="ms-3 me-3" alt=""
+              /></a>
+              <a href="tel:7875011143"><img src="img/call.png" class="me-3" alt="" /></a>
+              <a href="mailto:swayam.kadbe@gmail.com"><img src="img/gmail.png" class="me-3" alt="" /></a>
+              <a href="https://www.instagram.com/shubham_kadbe/"><img src="img/instagram.png" alt="" /></a>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="js/gsap.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
