@@ -258,4 +258,7 @@ a.scrolltop:hover img {
     text-align: center;
     width: 100%;
   }
+  #Home .main-heading {
+    top: 55%;
+  }
 }
